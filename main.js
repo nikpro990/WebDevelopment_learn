@@ -1,4 +1,3 @@
-import data from './data.json';
 
 document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
@@ -15,6 +14,89 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonOOP = document.getElementById("button-start-oop");
     const buttonLocal = document.getElementById("button-start-localdata")
     const buttonJSTasks = document.getElementById("button-start-js");
+    const buttonTimeset = document.getElementById("button-start-timeset")
+
+    buttonTimeset.addEventListener("click", function(){
+      /*
+      setTimeout(() => {
+         alert("Таймер работает")
+      }, 1000);
+      */
+
+      /*
+      setTimeout(() => {
+        console.log("Loading.....");
+      }, 5000);
+      */
+
+      /*
+      const name = "Nik";
+      setTimeout(() => {
+        console.log("Name: " + name)
+      }, 5000);
+      */
+
+      /*
+      function String(){
+        console.log("Здравствуйте");
+      }
+      
+      setTimeout(String, 3000);
+      */
+
+      /*
+      let Timeid = setTimeout(() => alert("TimerID"), 1000)
+      console.log(Timeid)
+      clearTimeout(Timeid);
+      */
+
+      /*
+      setInterval(() => {
+        console.log("Цикл")
+      }, 1000);
+      */
+      /*
+        let timerId = setInterval(() => {
+          console.log("Тик")
+        }, 1000);
+        
+        setTimeout(() => {
+          clearInterval(timerId)
+        }, 3000);
+      */
+     
+      /*
+      let count = 0;
+      let timer = setInterval(() => {
+        count++;
+        console.log(count);
+      }, 1000);
+      setTimeout(() => {
+        clearInterval(timer);
+      }, 5000);
+      */
+
+      /*
+      let timer = setInterval(() => {
+        console.log("Таймер запущен");
+      }, 1000);
+      setTimeout(() => {
+        clearInterval(timer);
+        console.log("Таймер остановлен");
+      }, 5000);
+      */
+
+      let count = 6;
+      let timer = setInterval(() => {
+        count--;
+        console.log(count);
+      }, 1000);
+      setTimeout(() =>{
+        clearInterval(timer);
+        console.log("Старт!");
+      }, 5000);
+    
+    });  
 
     buttonJSTasks.addEventListener("click", function(){
       let choiceTask = prompt(
@@ -130,8 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
         function sayHi(){
           console.log("Hi!");
         }
+        sayHi();
 
       }
+
+
     });
 
     buttonLocal.addEventListener("click", function() {
