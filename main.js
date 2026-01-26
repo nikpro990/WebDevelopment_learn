@@ -1,3 +1,4 @@
+//const { render } = require("sass");
 
 document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
@@ -15,6 +16,95 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonLocal = document.getElementById("button-start-localdata")
     const buttonJSTasks = document.getElementById("button-start-js");
     const buttonTimeset = document.getElementById("button-start-timeset")
+    const buttonPromise = document.getElementById("button-start-promise");
+
+    
+
+    buttonPromise.addEventListener("click", async(event) => {
+      /*
+      const promise = new Promise((resolve, reject ) => {
+        resolve("Готово");
+      });
+      promise.then(result => {
+        console.log(result);
+      });
+      promise.catch(error => {
+        console.log(error);
+      });
+      promise.finally(() =>{
+        console.log("Конец");
+      });
+      //const result0 = await somePromise;
+      */
+      /*
+      async function loadData(){
+        try{
+          const res = await fetch(url);
+          const data = await res.json();
+          console.log(data);
+        } catch(error){
+          console.log(error);
+        }
+      }
+      */
+
+      
+    /* 
+    const promise = new Promise((resolve, reject) => {
+      resolve(10)
+      promise.then(res1 => {
+        return res1 * 2;
+      });
+      promise.then(res2 => {
+        return res2 + 5;
+      });
+      promise.then(res3 => {
+        console.log(res3);
+      });
+    });
+    */
+
+      /*
+      const promise = new Promise((resolve, reject ) => {
+        resolve("лол");
+      });
+      */
+
+      const p1 = Promise.resolve(10);
+      const p2 = Promise.resolve(20);
+      const p3 = Promise.resolve(30);
+
+      Promise.all([p1,p2,p3])
+      .then(result => {
+        console.log(result);
+      });
+      
+      const a = new Promise(res => setTimeout(() => res("A"), 1000));
+      const b = new Promise(res => setTimeout(() => res("B"), 500));
+
+      Promise.all([a,b]).then(result => {
+        console.log(result);
+      });
+
+      const a1 = new Promise(res => setTimeout(() => res(1), 500));
+      const b2 = new Promise(res => setTimeout(() => res(2), 1000));
+      const c = new Promise(res => setTimeout(() => res(3), 1500));
+
+      Promise.all([a1,b2,c]).then(result => {
+        console.log(result);
+      });
+
+      fetch("http://jsonplaceholder.typicode.com/users/1")
+       .then((res) => res.json())
+       .then((users) => {
+         console.log(users.name, users.email)
+       })
+       .catch((err) => console.log("ошика: ", err));
+    
+      fetch("http://jsonplaceholder.typicode.com/comments")
+         
+
+    });
 
     buttonTimeset.addEventListener("click", function(){
       /*
@@ -86,12 +176,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 5000);
       */
 
+      
       let count = 6;
       let timer = setInterval(() => {
         count--;
         console.log(count);
       }, 1000);
-      setTimeout(() =>{
+      setTimeout(() => {
         clearInterval(timer);
         console.log("Старт!");
       }, 5000);
