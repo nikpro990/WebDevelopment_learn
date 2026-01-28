@@ -20,6 +20,10 @@
   color: rgb(198, 198, 198);
 }
 
+#CanvasJS{
+  border: 1px solid black;
+}
+
 .elements{
   
   font-family: "Rubik Mono One";

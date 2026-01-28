@@ -17,8 +17,47 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonJSTasks = document.getElementById("button-start-js");
     const buttonTimeset = document.getElementById("button-start-timeset")
     const buttonPromise = document.getElementById("button-start-promise");
-
     
+    const CanvasJS = document.getElementById("CanvasJS");
+    const ctx = CanvasJS.getContext("2d");
+
+    ctx.fillStyle = "red";
+    ctx.fillRect(10,10,50,50);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect(80,10,50,50);
+
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(100, 200);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.fillStyle = "white";
+    ctx.arc(50, 150, 40, 0, Math.PI * 2);
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+    ctx. fill();
+
+    ctx.fillText("Hello", 10, 10, 0);
+    ctx.font='20px sans-serif';
+
+
+    let x = 0;
+
+    function animation(){
+     ctx.clearRect(0, 230, 925, 60);
+     ctx.fillRect(x, 230, 50, 50);
+     ctx.fillStyle = "orange"
+     x += 5;
+     if(x == 925){
+      x = 0;
+     }
+     
+    requestAnimationFrame(animation); 
+    }
+
+    animation();
 
     buttonPromise.addEventListener("click", async(event) => {
       /*
@@ -100,9 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
          console.log(users.name, users.email)
        })
        .catch((err) => console.log("ошика: ", err));
-    
-      fetch("http://jsonplaceholder.typicode.com/comments")
-         
 
     });
 
