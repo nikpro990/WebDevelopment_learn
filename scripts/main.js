@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.fillStyle = "blue";
     ctx.fillRect(80,10,50,50);
 
+    ctx.fillStyle = "rgba(68, 25, 33, 0.8)";
+    ctx.fillRect(150,10,50,50);
+
     ctx.beginPath();
     ctx.moveTo(100, 100);
     ctx.lineTo(100, 200);
@@ -39,10 +42,66 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.stroke();
     ctx. fill();
 
-    ctx.fillText("Hello", 10, 10, 0);
-    ctx.font='20px sans-serif';
+    ctx.fillStyle='black';
+    ctx.fillRect(120,100,100,100);
+    ctx.clearRect(140, 120, 60, 60);
+    ctx.strokeRect(145, 125, 50, 50);
 
+    
+    ctx.beginPath();
+    ctx.moveTo(300, 200);
+    ctx.lineTo(250, 200);
+    ctx.lineTo(300, 125);
+    ctx.closePath();
+    ctx.stroke(); 
 
+    ctx.beginPath();
+    ctx.moveTo(240, 101);
+    ctx.lineTo(300, 100);
+    ctx.lineTo(230, 200);
+    ctx.closePath();
+    ctx.stroke();
+
+    const img = new Image();
+    img.src = "https://preview.redd.it/hyprland-on-debian-v0-q962hnqoigae1.png?auto=webp&s=23cf231df64c861a168b5f10ac18614e7644ce50";
+
+    img.onload = () => {
+     ctx.drawImage(img, 330, 5, 300, 200);
+    }
+    
+    
+
+    //сообщение
+    /*
+    ctx.beginPath();
+    ctx.moveTo(75, 25);
+    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.quadraticCurveTo(33, 90, 50, 100);
+    ctx.quadraticCurveTo(58, 128, 30, 125);
+    ctx.quadraticCurveTo(68, 128, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.stroke();
+    ctx.fill();
+    */
+
+    //сердце
+    /*
+    ctx.beginPath();
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.fill();
+    */
+
+    ctx.fillStyle = "orange"
+    ctx.font='30px sans-serif';
+    ctx.fillText("Hello", 10, 95);
+    
     let x = 0;
 
     function animation(){
@@ -58,6 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     animation();
+
+            
 
     buttonPromise.addEventListener("click", async(event) => {
       /*
