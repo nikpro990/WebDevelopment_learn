@@ -17,7 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonJSTasks = document.getElementById("button-start-js");
     const buttonTimeset = document.getElementById("button-start-timeset")
     const buttonPromise = document.getElementById("button-start-promise");
-    
+    const buttonDataBase = document.getElementById("button-start-DataBase");
+
+    buttonDataBase.addEventListener("click", () => {
+      
+    });
+
     const CanvasJS = document.getElementById("CanvasJS");
     const ctx = CanvasJS.getContext("2d");
 
@@ -69,6 +74,55 @@ document.addEventListener("DOMContentLoaded", () => {
      ctx.drawImage(img, 330, 5, 300, 200);
     }
     
+    ctx.shadowColor='rgba(0,0,0,0.35)';
+    ctx.shadowBlur=12;
+    ctx.shadowOffsetX=8;
+    ctx.shadowOffsetY=8;
+
+    ctx.fillStyle = "red";
+    ctx.fillRect(660,5,160,100);
+    
+    ctx.shadowColor = "rgba(0,0,0,0.4)";
+    ctx.shadowBlur = 8;
+    ctx.shadowOffsetX = 4;
+    ctx.shadowOffsetY = 4;
+    
+    ctx.lineWidth=8;
+    ctx.strokeStyle = "#118ab2";
+
+    ctx.beginPath();
+    ctx.moveTo(250,5, 300, 200);
+    ctx.lineTo(250,90);
+    ctx.stroke();
+    
+    ctx.shadowColor = "rgba(0,0,0,0.5)"
+    ctx.shadowBlur = 6;
+    ctx.shadowOffsetX = 3;
+    ctx.shadowOffsetY = 3;
+
+    ctx.font = "32px Arial";
+    ctx.fillStyle = "white";
+    ctx.fillText("Debian", 685,40);
+
+    //все серое 
+    /*
+    const ImageData = ctx.getImageData(0, 0, CanvasJS.width, CanvasJS.height);
+    const data = ImageData.data;
+    
+    for(let i = 0; i < data.length; i += 4){
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+
+      const gray = (r + g + b) / 3;
+
+      data[i] = gray;
+      data[i + 1] = gray;
+      data[i + 2] = gray;
+    }
+    
+    ctx.putImageData(ImageData, 0, 0);
+    */
     
 
     //сообщение
