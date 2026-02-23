@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonDataBase = document.getElementById("button-start-DataBase");
 
     buttonDataBase.addEventListener("click", () => {
-      
+         
     });
 
     const CanvasJS = document.getElementById("CanvasJS");
