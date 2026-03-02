@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonPromise = document.getElementById("button-start-promise");
     const buttonDataBase = document.getElementById("button-start-DataBase");
 
+    
+
     buttonDataBase.addEventListener("click", () => {
-         
+        alert("Заходить в Server Sql") 
     });
 
     const CanvasJS = document.getElementById("CanvasJS");
